@@ -1,0 +1,13 @@
+# Created by .ignore support plugin (hsz.mobi)
+.gradle/
+.idea/.gitignore
+.idea/compiler.xml
+.idea/dbnavigator.xml
+.idea/gradle.xml
+.idea/jarRepositories.xml
+.idea/misc.xml
+.idea/uiDesigner.xml
+.idea/vcs.xml
+HELP.md
+build/
+src/main/resources/application-secret.properties
