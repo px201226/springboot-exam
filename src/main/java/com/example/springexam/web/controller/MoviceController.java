@@ -1,7 +1,8 @@
-package com.example.springexam.controller;
+package com.example.springexam.web.controller;
 
 
 import com.example.springexam.domain.Movie;
+import com.example.springexam.domain.MovieGroup;
 import com.example.springexam.service.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,5 +22,10 @@ public class MoviceController {
     @GetMapping("/movies")
     public List<Movie> getMoviesByQuery(@RequestParam("query") String query){
         return movieService.query(query);
+    }
+
+    @GetMapping("/recommand-movie")
+    public Movie recommandedMovie(@RequestParam("query") String query){
+        return  movieService.getHighestRatingMovie(query);
     }
 }
